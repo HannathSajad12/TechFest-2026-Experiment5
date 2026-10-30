@@ -1,4 +1,3 @@
-
 name: TechFest CI Pipeline
 
 on:
@@ -13,12 +12,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 20
 
       - name: Install frontend dependencies
         working-directory: frontend
@@ -33,18 +32,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
-
-      - name: Check backend folder
-        run: |
-          cd backend
-          ls -la
-          test -f package.json
+          node-version: 20
 
       - name: Install backend dependencies
         working-directory: backend
