@@ -40,5 +40,5 @@ jobs:
           node-version: 20
 
       - name: Install backend dependencies
-        working-directory: backend
+        working-directory: backend/techfest-backend
         run: npm install
